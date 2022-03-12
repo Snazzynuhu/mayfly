@@ -1,38 +1,46 @@
-.App {
-  text-align: center;
+.App{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.link{
+    text-decoration: none;
+    color: black;
+}
+.gender{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 50vw;
+}
+.gender input{
+    display: none;
+}
+.title{
+    color: green;
+    margin-bottom: 1rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.gender .male-check{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 1rem;
+    outline: 3px solid green;
+    outline-offset: 0.1rem;
+    margin-left: -2rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.gender>input:checked+.male-check{
+    background-color: green;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.gender .female-check{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 1rem;
+    outline: 3px solid green;
+    outline-offset: 0.1rem;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.gender>input:checked+.female-check{
+    background-color: green;
 }
